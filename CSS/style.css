@@ -1,0 +1,252 @@
+body {
+  background: #333;
+  font-family: sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#fixed{
+  position: fixed;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  background-color: #222;
+  padding: 1% 0;
+}
+
+#preview, #previewJson {
+  background-color: #110110;
+  color: #AAAAAA;
+  border: 3px solid #1E0146;
+  box-sizing: border-box;
+  transition: height 0s;
+  font-family: 'minecraftfont', 'Roboto', sans-serif;
+}
+
+.container p {
+  margin: auto;
+  text-align: justify;
+  font-family: Arial;
+  padding: 2rem;
+  font-size: 2rem;
+  color: lightgray;
+}
+
+.TextLink {
+  color: white;
+  color: purple;
+}
+.TextLink:hover{
+  color: magenta;
+  text-shadow: purple 1px 0 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.footer{
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  color: #555;
+  bottom: 0;
+  background-color: #222;
+}
+
+.container{
+  width: 80%;
+  margin: auto; /* Center the DIV horizontally */
+  padding: 20px;
+}
+
+h2 {
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.3);
+  background-color: #555;
+  color: black;
+  text-align: center;
+  padding: 10px;
+  font-size: 2.8rem;
+}
+
+nav {
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  background-color: #333;
+}
+
+nav a{
+  background-color: #222;
+  float: left;
+  color: white;
+  text-shadow: purple 1px 0 10px;
+  text-align: center;
+  padding: 18px 22px;
+  text-decoration: none;
+  font-size: 2rem;
+}
+
+nav a:hover {
+  background-color: #111;
+  text-shadow: purple 1px 0 13px;
+  transition: all 0.4s ease-in-out;
+  color: purple;
+}
+
+.right {
+  float: right;
+}
+
+.left {
+  float: left;
+}
+
+.link {
+  font-size: 2rem;
+  color: purple;
+}
+
+.link:hover {
+  text-shadow: purple 1px 0 10px;
+  color: purple;
+}
+
+input[type=text], button, textarea {
+  font-size: 2rem;
+  resize: none;
+  overflow: hidden;
+  box-sizing: border-box;
+  border: none;
+  background-color: lightgray;
+  color: black;
+  outline: none;
+  transition: height 0s;
+}
+
+input[type=text]:hover, textarea:hover {
+  box-shadow: purple 1px 0 10px;
+  transition: height 0s;
+}
+
+input[type=text]:focus, button:hover, textarea:focus {
+  background-color: gray;
+  transition: all 0.3s ease-in-out;
+  outline: none;
+  box-shadow: purple 1px 0 10px;
+  border: none;
+  transition: height 0s;
+}
+
+button {
+  font-size: 2rem;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+#CustomUpload {
+  margin-bottom: 10px;
+  border-radius: 25px;
+  border: 2px solid black;
+  background-color: gray;
+}
+
+#CustomUpload:hover {
+  box-shadow: purple 1px 0 10px;
+  background-color: #555;
+  transition: all 0.3s ease-in-out;
+}
+
+@font-face {
+    font-family: "minecraftfont";
+    src: url(/public/fonts/1412/minecraftfont.eot);
+    src: local("minecraftfont"), url(http://fontsforweb.com/public/fonts/1412/minecraftfont.ttf) format("truetype");
+}
+
+
+.collapsible {
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 4px;
+  margin: 6px 0;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  transition: all 0.5s ease-in-out;
+}
+.active, .collapsible:hover {
+  background-color: #888;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.4);
+}
+.collapsible-content {
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+  padding: 18px;
+  display: none;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+}
+
+.skin {
+  perspective: 1000px;
+  perspective-origin: 50% 0;
+  height: 235px;
+  width: 250px;
+  position: relative;
+}
+
+.innerCube {
+  margin-top: 20px;
+  margin-left: 40px;
+  width: 170px;
+  height: 170px;
+  position: absolute;
+  transform-style: preserve-3d;
+  animation: spin 10s linear infinite;
+}
+
+.innerCube .front, .innerCube .back, .innerCube .right, .innerCube .left, .innerCube .top, .innerCube .bottom {
+  width: 160px;
+  height: 160px;
+  background-size: 1280px 1280px;
+  top: 5px;
+  left: 5px;
+}
+
+.innerCube .hatFront, .innerCube .hatBack, .innerCube .hatRight, .innerCube .hatLeft, .innerCube .hatTop, .innerCube .hatBottom {
+  width: 170px;
+  height: 170px;
+  background-size: 1360px 1360px;
+}
+
+.innerCube .front, .innerCube .back, .innerCube .right, .innerCube .left, .innerCube .top, .innerCube .bottom,
+.innerCube .hatFront, .innerCube .hatBack, .innerCube .hatRight, .innerCube .hatLeft, .innerCube .hatTop, .innerCube .hatBottom {
+  position: absolute;
+  background-image: url('http://textures.minecraft.net/texture/b732c4aeb233f9e6cf332221e2f3611958c11583e3644038483ef49c11a648');
+  background-repeat: no-repeat;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -o-crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+  -ms-interpolation-mode: nearest-neighbor;
+  image-rendering: pixelated;
+}
+
+.innerCube .front  { transform: rotateY(   0deg ) translateZ( 80px ); background-position: -160px -160px; }
+.innerCube .back   { transform: rotateY( 180deg ) translateZ( 80px ); background-position: -480px -160px; }
+.innerCube .right  { transform: rotateY(  90deg ) translateZ( 80px ); background-position: -320px -160px; }
+.innerCube .left   { transform: rotateY( -90deg ) translateZ( 80px ); background-position: 0px -160px; }
+.innerCube .top    { transform: rotateX(  90deg ) translateZ( 80px ); background-position: -160px 0px; }
+.innerCube .bottom { transform: rotateX( -90deg ) translateZ( 80px ); background-position: -320px 0px; }
+
+.innerCube .hatFront  { transform: rotateY(   0deg ) translateZ( 85px ); background-position: -850px -170px; }
+.innerCube .hatBack   { transform: rotateY( 180deg ) translateZ( 85px ); background-position: -1190px -170px; }
+.innerCube .hatRight  { transform: rotateY(  90deg ) translateZ( 85px ); background-position: -1020px -170px; }
+.innerCube .hatLeft   { transform: rotateY( -90deg ) translateZ( 85px ); background-position: -680px -170px; }
+.innerCube .hatTop    { transform: rotateX(  90deg ) translateZ( 85px ); background-position: -850px 0px; }
+.innerCube .hatBottom { transform: rotateX( -90deg ) translateZ( 85px ); background-position: -1020px 0px; }
+
+
+@keyframes spin {
+  from { transform: rotateY(0deg); }
+  to { transform: rotateY(360deg); }
+}

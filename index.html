@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<link rel="stylesheet" href="CSS/normalize.css">
+<link rel="stylesheet" href="CSS/skeleton.css">
+<link rel="stylesheet" href="CSS/style.css">
+<title>Material Generator</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+</head>
+
+<body>
+
+<!-- Header / Nav Bar -->
+<nav height="10%" width="10%">
+  <a href="#new">New</a>
+  <a href="#generate">Generate</a>
+  <a href="#about" class="right">About</a>
+  <a href="#contacts" class="right">Contacts</a>
+</nav>
+
+<!-- Container -->
+<div class="container">
+  <section id="new">
+
+    <h2>New Item</h2>
+    <p>Create a new material by filling the fields below and then clicking on <a class="TextLink" href="#generate">Generate</a>! The fields have placeholders to guide you. All fields but 'description' and 'food_value' are required! Some are already filled with default values.</p>
+      <section class="row">
+        <input class="XL-6 S-12" type="text" name="id" value="" placeholder="example_id" required>
+        <input class="XL-6 S-12 right" type="text" name="name" value="" placeholder="Item Name" required>
+      </section>
+      <section class="row">
+        <input class="XL-6 S-12" type="text" name="rarity" value="" placeholder="COMMON" required>
+        <input class="XL-6 S-12 right" type="text" name="type" value="" placeholder="MATERIAL" required>
+      </section>
+      <section class="row">
+        <input class="XL-6 S-12" type="text" name="material" value="PLAYER_HEAD" placeholder="material e.g. 'PLAYER_HEAD'" required>
+        <input class="XL-6 S-12 right" type="text" name="model" value="0" placeholder="model e.g. '0'" required>
+      </section>
+      <section class="row">
+        <input class="XL-6 S-12" type="text" name="protected" value="false" placeholder="protected e.g. 'false'" required>
+        <input class="XL-6 S-12 right" type="text" name="finite" value="false" placeholder="finite e.g. 'false'" required>
+      </section>
+      <section class="row">
+        <input class="XL-6 S-12" type="text" name="skinValue" value="" placeholder="skin value e.g. a0285bea3c8a02db139fa8ec5cc588615a98550725f8e676c93fdbc33b6b" required>
+        <input class="XL-6 S-12 right" type="text" name="foodValue" value="" placeholder="food_value e.g. '0.3'">
+      </section>
+      <section class="row">
+        <a class="XL-6 S-12 link" target="_blank" href="https://minecraft-heads.com/custom-heads">https://minecraft-heads.com/custom-heads</a>
+      </section>
+      <section class="row">
+        <hr>
+        <textarea oninput="auto_grow(this)" height="80px" name="description" rows="5" cols="50" placeholder="Item's description here!"></textarea>
+        <textarea oninput="auto_grow(this)" height="80px" name="tags" rows="5" cols="50" placeholder="metal (Each on new line)" required></textarea>
+      </section>
+  </section>
+
+  <section id="generate">
+    <h2>Generate</h2>
+    <article class="row">
+      <p>Here you can create the new material, look at a preview and add the item to a new or already existing .json file.</p>
+      <section class="row">
+          <div class="skin spinning">
+            <div class="innerCube">
+              <div class="customHead back" style="background-image: url('http://textures.minecraft.net/texture/c35ba393b8610b63ebee4c13c8358bc6c94a9dedc8e4d7d36b922257e65e8');"></div>
+              <div class="customHead right" style="background-image: url('http://textures.minecraft.net/texture/c35ba393b8610b63ebee4c13c8358bc6c94a9dedc8e4d7d36b922257e65e8');"></div>
+              <div class="customHead top" style="background-image: url('http://textures.minecraft.net/texture/c35ba393b8610b63ebee4c13c8358bc6c94a9dedc8e4d7d36b922257e65e8');"></div>
+              <div class="customHead bottom" style="background-image: url('http://textures.minecraft.net/texture/c35ba393b8610b63ebee4c13c8358bc6c94a9dedc8e4d7d36b922257e65e8');"></div>
+              <div class="customHead front" style="background-image: url('http://textures.minecraft.net/texture/c35ba393b8610b63ebee4c13c8358bc6c94a9dedc8e4d7d36b922257e65e8');"></div>
+              <div class="customHead left" style="background-image: url('http://textures.minecraft.net/texture/c35ba393b8610b63ebee4c13c8358bc6c94a9dedc8e4d7d36b922257e65e8');"></div>
+              <div class="customHead hatBack" style="background-image: url('http://textures.minecraft.net/texture/c35ba393b8610b63ebee4c13c8358bc6c94a9dedc8e4d7d36b922257e65e8');"></div>
+              <div class="customHead hatRight" style="background-image: url('http://textures.minecraft.net/texture/c35ba393b8610b63ebee4c13c8358bc6c94a9dedc8e4d7d36b922257e65e8');"></div>
+              <div class="customHead hatTop" style="background-image: url('http://textures.minecraft.net/texture/c35ba393b8610b63ebee4c13c8358bc6c94a9dedc8e4d7d36b922257e65e8');"></div>
+              <div class="customHead hatBottom" style="background-image: url('http://textures.minecraft.net/texture/c35ba393b8610b63ebee4c13c8358bc6c94a9dedc8e4d7d36b922257e65e8');"></div>
+              <div class="customHead hatFront" style="background-image: url('http://textures.minecraft.net/texture/c35ba393b8610b63ebee4c13c8358bc6c94a9dedc8e4d7d36b922257e65e8');"></div>
+              <div class="customHead hatLeft" style="background-image: url('http://textures.minecraft.net/texture/c35ba393b8610b63ebee4c13c8358bc6c94a9dedc8e4d7d36b922257e65e8');"></div>
+            </div>
+          </div>
+        <textarea class="XL-10" oninput="auto_grow(this)" id="preview" name="preview"></textarea>
+      </section>
+      <section class="row">
+        <button onclick="preview()" class="XL-6 S-12" type="button" name="preview">Preview</button>
+        <button class="XL-6 S-12 right" onclick="generate()">Generate</button>
+      </section>
+      <textarea class="XL-12" id="previewJson" oninput="auto_grow(this)" width="100%" name="json"></textarea>
+      <label class="XL-6 S-10 custom-file-upload">
+        <input type="file" onchange="showFile(this)">
+        <p id="CustomUpload">Add to file!</p>
+      </label>
+    </article>
+  </section>
+
+  <section id="about">
+    <h2>About</h2>
+    <article class="row">
+      <p>I created this website to simplify the process of creating new custom materials used in <a class="TextLink" href="#">Kenzie's World</a>. Fill the fields in the <a class="TextLink" href="#new">New Item</a> section and click <a class="TextLink" href="#generate">Preview</a> to see the result, <a class="TextLink" href="#generate">Generate</a> to create the item, and <a class="TextLink" href="#CustomUpload">Add to file!</a> to add it.</p>
+    </article>
+  </section>
+</div>
+
+<!-- Footer -->
+<div class="footer" id="contacts">
+  <p>WrexBG © 2020</p>
+  <p>* Discord: WrexBG#6785</p>
+</div>
+<div id="fixed">
+</div>
+
+<script src="JS/script.js"></script>
+
+</body>
+</html>
